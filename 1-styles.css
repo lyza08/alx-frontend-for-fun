@@ -1,0 +1,34 @@
+:root {
+    --color: #8A153A;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: Times, serif;
+}
+
+a {
+    color: #a71d37;
+    text-decoration: none;
+    position: relative;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background: #a71d37;
+    transition: width .7s ease;
+}
+
+a:hover::before {
+    width: 100%;
+}
